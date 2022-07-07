@@ -1,15 +1,141 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{layout/layout}">
-    <head th:replace="layout/layout :: head">
+      layout:decorate="~{layout/layout-principal}">
+    <head th:replace="layout/layout-principal :: head">
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="@{https://code.iconify.design/2/2.2.1/iconify.min.js}"></script>
     </head>
     <body>
         <div class="container-fluid" layout:fragment="page-content">
-            <div>Holaaaa cpp Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, voluptates, dolor, consequatur rem dignissimos sit dolorum rerum ab eaque saepe quaerat quas dolore officiis expedita praesentium ratione natus a enim.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, eius.</div>
+            <div class="container text-center">
+                <br> <br>
+                <h2 class="thin">¿Que es el RUOS?</h2>
+                <p class="text-muted">
+                    El Registro Único de Organizaciones sociales –RUOS, es el sistema y proceso de reconocimiento y registro, a cargo de las municipalidades distritales de la provincia de Lima y de la Municipalidad Metropolitana de Lima, en sus respectivos niveles, de las organizaciones sociales ubicadas al interior de sus jurisdicciones.
+
+                    Dentro de lo establecido en la Ordenanza N°1762-2013-MML  y su modificatoria Ordenanza N°2363-2021-MML, se describen los requisitos y el procedimiento para el reconocimiento de las organizaciones sociales y sus representantes, así como los actos que  realicen con posterioridad a su inscripción.
+                </p>
+                <h2 class="thin">¿Qué es una organización social?</h2>
+                <p class="text-muted">
+                    Toda forma organizativa de personas naturales, jurídicas o de ambas inscritas o no en Registros Públicos, que se constituye sin fines lucrativos, políticas, partidarios, gremiales ni confesionales, por su libre decisión.
+
+                    Actividad común: Perseguir la defensa y promoción de sus derechos, el desarrollo individual y colectivo y el de su localidad.
+                </p>
+            </div>
+
+            <div class="jumbotron top-space">
+                <div class="container">
+
+                    <h2 class="text-center thin">PASOS PARA REGISTRAR TU ORGANIZACION</h2>
+
+                    <div class="justify-content-center d-flex align-items-cente">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 highlight">
+                                <div class="h-caption">
+                                    <h4><i class="fa-solid fa-circle-plus"></i></i>Crear Cuenta</h4>
+                                </div>
+                                <div class="h-body text-center">
+                                    <p>Crea tu usuario y contraseña para entrar a la pagina</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 highlight">
+                                <div class="h-caption">
+                                    <h4><i class="fa-solid fa-user"></i></i>Iniciar Sesion</h4>
+                                </div>
+                                <div class="h-body text-center">
+                                    <p>Escribe tu usuario y contraseña para loguearte a la pagina</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 highlight">
+                                <div class="h-caption">
+                                    <h4><i class="fa-solid fa-upload"></i>Subir Documentos</h4>
+                                </div>
+                                <div class="h-body text-center">
+                                    <p>Sube los documentos de tu organizacion social</p>
+                                </div>
+                            </div>                        
+                        </div> 
+
+                        <div class="row">
+
+                            <div class="col-md-3 col-sm-6 highlight">
+                                <div class="h-caption">
+                                    <h4><i class="fa-solid fa-envelope-circle-check"></i>Enviar Solicitud </h4>
+                                </div>
+                                <div class="h-body text-center">
+                                    <p>Envia todos los archivos subidos</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 highlight">
+                                <div class="h-caption">
+                                    <h4><i class="fa-solid fa-magnifying-glass"></i>Evaluacion de Documentos</h4>
+                                </div>
+                                <div class="h-body text-center">
+                                    <p>Podrás observar en el proceso de evaluacion que se encuentra tu solicitud</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 highlight">
+                                <div class="h-caption">
+                                    <h4><i class="fa-solid fa-thumbs-up"></i>Aprobacion Final</h4>
+                                </div>
+                                <div class="h-body text-center">
+                                    <p>Podras ver el informe del estado de tu solicitud</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div class="container"> 
+     <h2 class="text-center top-space">Plantillas:</h2>
+        <br>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Nombre del Formato</th>
+                        <th scope="col">Modelo Formato</th>
+                        <th scope="col">Modelo Para rellenar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>SOLICITUD PARA REGISTRO NUEVO DE ORGANIZACIÓN</td>
+                        <td><i class="fa-solid fa-file-pdf"></i></td>
+                        <td><i class="fa-solid fa-file-lines"></i></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>SOLICITUD PARA ACTUALIZACIÓN DE ORGANIZACIÓN</td>
+                        <td><i class="fa-solid fa-file-pdf"></i></td>
+                        <td><i class="fa-solid fa-file-lines"></i></td>
+                    </tr>
+                    <tr>
+                        <td scope="row">3</td>
+                        <td>ACTA DE ELECCIÓN DEL ÓRGANO DIRECTIVO</td>
+                        <td><i class="fa-solid fa-file-pdf"></i></td>
+                        <td><i class="fa-solid fa-file-lines"></i></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>ESTATUTO Y ACTA DE APROBACIÓN</td>
+                        <td><i class="fa-solid fa-file-pdf"></i></td>
+                        <td><i class="fa-solid fa-file-lines"></i></td>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <td>ACTA DE FUNDACIÓN O DE CONSTITUCIÓN</td>
+                        <td><i class="fa-solid fa-file-pdf"></i></td>
+                        <td><i class="fa-solid fa-file-lines"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+</div>
         </div>
 
     </body>

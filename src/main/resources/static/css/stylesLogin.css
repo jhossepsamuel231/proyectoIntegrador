@@ -1,0 +1,14 @@
+#head {
+    background:#181015 url( ../imagesLayout/loginUno.jpg) ;
+    width: 100%;
+    height: 100vh;
+}
+.card {
+    width: 30%;
+    height: 70vh;
+    border-radius: 30px;
+    background: #419a2b;
+    box-shadow: 10px 10px 10px #21b14c,
+                -10px -10px 10px #6cde2f;
+    
+   }

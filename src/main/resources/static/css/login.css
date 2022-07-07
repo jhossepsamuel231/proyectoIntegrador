@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.fondoImg {
+    background: #181015 url(../imagesLayout/loginUno.jpg);
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.login {
+    width: 28%;
+    height: 80%;
+    border: 1px solid #CCC;
+    background-color: rgba(179, 179, 179, 0.741);
+    background-size: cover;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.login .form {
+    width: 100%;
+    height: 100%;
+    padding: 15px 25px;
+}
+
+
+.form img {
+    width: 50%;
+}
+
+
+
+::-webkit-input-placeholder {
+    color: #56934e;
+}
+
+
+
+
+
+
+.groupUno {
+    position: relative;
+    margin-top: 2.5rem;
+}
+.groupDos {
+    position: relative;
+    margin-top: 3.5rem;
+}
+
+.input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #515151;
+    background: transparent;
+}
+
+.input:focus {
+    outline: none;
+}
+
+
+label {
+    color: rgb(73, 161, 80);
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.input:focus~label,
+.input:valid~label {
+    top: -20px;
+    font-size: 14px;
+    color: #71954f;
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.bar:before,
+.bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #58a14d;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+.input:focus~.bar:before,
+.input:focus~.bar:after {
+    width: 50%;
+}
+
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.input:focus~.highlight {
+    animation: inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #43da48;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+
+
+
+
+
+
+.buttonLogin {
+    margin-top: 3rem;
+    font-weight: bold;
+    padding: 17px 40px;
+    border-radius: 50px;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+}
+
+.buttonLogin:hover {
+    letter-spacing: 3px;
+    background-color: rgb(70, 220, 24);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(58, 198, 40) 0px 7px 29px 0px;
+}
+
+.buttonLogin:active {
+    letter-spacing: 3px;
+    background-color: rgb(66, 220, 24);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(96, 204, 130) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
