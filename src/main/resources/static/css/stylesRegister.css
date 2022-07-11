@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+
+.fondoImg {
+    background: #181015 url(../imagesLayout/registerUno.jpg);
+    width: 100%;
+    height: 100vh;
+}
+
+.login {
+    width: 68%;
+    height: 85%;
+    border: 1px solid #CCC;
+    background-color: rgba(197, 191, 191, 0.808);
+    background-size: cover;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.login .form {
+    width: 100%;
+    height: 100%;
+    padding: 15px 25px;
+}
+
+
+.form img {
+    width: 50%;
+}
+
+/* From uiverse.io by @mrhyddenn */
+.icon-btn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #cdcdcd;
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.2s ease-in-out;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.add-btn:hover {
+  width: 150px;
+}
+
+.add-btn::before,
+.add-btn::after {
+  transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 10px;
+  top: calc(50% - 2px);
+  background: seagreen;
+}
+
+.add-btn::after {
+  right: 14px;
+  overflow: hidden;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.add-btn::before {
+  left: 14px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.icon-btn:focus {
+  outline: none;
+}
+
+.btn-txt {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.add-btn:hover::before,
+.add-btn:hover::after {
+  width: 4px;
+  border-radius: 2px;
+}
+
+.add-btn:hover .btn-txt {
+  opacity: 1;
+}
+
+.add-icon::after,
+.add-icon::before {
+  transition: all 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  top: calc(50% - 10px);
+  background: seagreen;
+  overflow: hidden;
+}
+
+.add-icon::before {
+  left: 22px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.add-icon::after {
+  right: 22px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.add-btn:hover .add-icon::before {
+  left: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
+
+.add-btn:hover .add-icon::after {
+  right: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
+
+
+/* From uiverse.io */
+.btnVolver {
+ --color: #36a665;
+ font-family: inherit;
+ display: inline-block;
+ width: 100px;
+ height: 50px;
+ line-height: 2.5em;
+ margin: 20px;
+ position: relative;
+ overflow: hidden;
+ border: 2px solid var(--color);
+ transition: color .5s;
+ z-index: 1;
+ font-size: 17px;
+ border-radius: 6px;
+ font-weight: 500;
+ color: var(--color);
+}
+
+.btnVolver:before {
+ content: "";
+ position: absolute;
+ z-index: -1;
+ background: var(--color);
+ height: 140px;
+ width: 200px;
+ border-radius: 50%;
+}
+
+.btnVolver:hover {
+ color: #fff;
+}
+
+.btnVolver:before {
+ top: 100%;
+ left: 100%;
+ transition: all .7s;
+}
+
+.btnVolver:hover:before {
+ top: -30px;
+ left: -30px;
+}
+
+.btnVolver:active:before {
+ background: #14a143;
+ transition: background 0s;
+}

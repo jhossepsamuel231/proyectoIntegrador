@@ -7,28 +7,26 @@
         <meta name="author" content="Sergey Pozhilov (GetTemplate.com)">
 
         <title>Proyecto Integrador</title>
-
         <link rel="shortcut icon" th:href="@{.../imagesLayout/gt_favicon.png}">
-
+       
         <link rel="stylesheet" th:href="@{/cssLayout/bootstrap.min.css}">
         <link rel="stylesheet" th:href="@{/cssLayout/font-awesome.min.css}">
         <script src="https://kit.fontawesome.com/82a228b425.js" crossorigin="anonymous"></script>
         <!-- Custom styles for our template -->
         <link rel="stylesheet" th:href="@{/cssLayout/bootstrap-theme.css}" media="screen">
         <link rel="stylesheet" th:href="@{/cssLayout/main.css}">
-        <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
         <link rel="stylesheet" th:href="@{/css/uiverse.css}"/>
     </head>
 
     <body >
-        <!-- Fixed navbar -->
+
         <div class="navbar navbar-inverse navbar-fixed-top headroom">
             <div class="container">
                 <div class="navbar-header">
                     <!-- Button for smallest screens -->
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span
                             class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                    <img src="@{/imagesLayout/logoUno.png}" width="80" height="auto">
+                    <img th:src="@{/imagesLayout/logoUno.png}" width="80" height="auto">
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav pull-right">
@@ -54,9 +52,8 @@
         <header id="head">
             <div class="container">
                 <div class="row">
-                    <h1 class="lead">AWESOME, CUSTOMIZABLE, FREE</h1>
-                    <p class="tagline">PROGRESSUS: free business bootstrap template by <a
-                            href="#">GetTemplate</a>
+                    <h1 class="lead">MUNICIPALIDAD DE CHACLACAYO</h1>
+                    <p class="tagline">Registra o actualiza tu Organizacion Social
                     </p>
                     <button class="button"> <a th:href="@{/login}" style="color: #ffffff; text-decoration: none;">Iniciar Sesion</a> 
                     </button>
@@ -143,7 +140,7 @@
         <script th:src="@{/jsLayout/headroom.min.js}"></script>
         <script th:src="@{/jsLayout/jQuery.headroom.min.js}"></script>
         <script th:src="@{/jsLayout/template.js}"></script>
-        <script th:src="@{/js/bootstrap.min.js}"></script>
+	<script th:src="@{/js/bootstrap.min.js}"></script>
     <th:block layout:fragment="page-scripts">
 
     </th:block>

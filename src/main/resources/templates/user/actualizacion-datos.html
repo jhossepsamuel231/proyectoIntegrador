@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layoutDashboard}">
+    <head th:replace="layout/layoutDashboard :: head">
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container-fluid p-3" layout:fragment="page-content">
+            <nav class="navbar navbar-light bg-light m-2">
+                <h4 class="ps-3"><i class="fa-solid fa-gauge me-2"></i>Actualizar RUOS</h4>
+            </nav>
+            <div class="container-fluid ">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-12 col-md-11 col-lg-10 mt-4">
+                        <div class="card">
+                            <div class="card-header">
+                                Registrar RUOS
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Datos de La Organizacion: </h5>
+                                <input 
+                                    class="form-control mt-5 mb-4"
+                                    type="text"
+                                    id="razonSocial"
+                                    placeholder="Ingrese la razon social: ">
+                                <select name="tipoOrganizacion" id="tipoOrganizacion" class="form-select mb-4">
+                                    <option value="0" disabled="" selected="">Tipo de Organzacion</option>
+                                    <option value="1">Vecinal</option>
+                                    <option value="2">Apoyo Alimenticio</option>
+                                    <option value="3">Poblacion Vulnerable</option>
+                                </select>
+                                <select name="nivelOrganizacion" id="nivelOrganizacion" class="form-select mb-4">
+                                    <option value="0" disabled="" selected="">Nivel de Organzacion</option>
+                                    <option value="1">Local</option>
+                                    <option value="2">Zonal</option>
+                                </select>
+                                <input 
+                                    class="form-control mb-4"
+                                    type="text"
+                                    id="Direccion"
+                                    placeholder="Ingrese la direccion">
+                                <input 
+                                    class="form-control mb-4"
+                                    type="email"
+                                    id="correo"
+                                    placeholder="Ingrese el nuevo correo electronico ">
+                                <a href="" class="btn btn-success align-items-center">
+                                    <i class="fa-solid fa-file-pen"></i><strong class="me-2"> Actualizar</strong>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="container-fluid ">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-12 col-md-11 col-lg-10 mt-4">
+                        <div class="card">
+                            <div class="card-header">
+                                Registrar RUOS
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-5 mt-3 mb-4">
+                                        <input type="text" disabled="" readonly class="form-control-plaintext" value="1. ACTA DE ASAMBLEA GENERAL CON LA ELECCIÓN DE LA NUEVA JUNTA DIRECTIVA">
+                                    </div>
+                                    <div class="col-5 mt-3 mb-4">
+                                        <input class="form-control" type="file" id="primerArchivo">
+                                    </div>
+                                    <div class="col-2 mt-3 mb-4">
+                                        <a href="#" onclick="validarPdfUno()"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+                                    <div class="col-5  mb-4">
+                                        <input type="text" disabled="" readonly class="form-control-plaintext" value="2. CONVOCATORIA A LA ASAMBLEA GENERA">
+                                    </div>
+                                    <div class="col-5  mb-4">
+                                        <input class="form-control" type="file" id="segundoArchivo">
+                                    </div>
+                                    <div class="col-2  mb-4">
+                                        <a href="#" onclick="validarPdfDos()"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+
+                                    <div class="col-5  mb-4">
+                                        <input type="text" disabled="" readonly class="form-control-plaintext"  value="3. PADRÓN ACTUALIZADO DE LOS MIEMBROS DE LA ORGANIZACIÓN">
+                                    </div>
+                                    <div class="col-5  mb-4">
+                                        <input class="form-control" type="file" id="tercerArchivo">
+                                    </div>
+                                    <div class="col-2  mb-4">
+                                        <a href="#" onclick="validarPdfTres()"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+
+                                    <div class="col-5  mb-4">
+                                        <input type="text" disabled="" readonly class="form-control-plaintext"  value="4. ESTATUTO DE LA ORGANIZACIÓN">
+                                    </div>
+                                    <div class="col-5  mb-4">
+                                        <input class="form-control" type="file" id="cuartoArchivo">
+                                    </div>
+                                    <div class="col-2  mb-4">
+                                        <a href="#" onclick="validarPdfCuatro()"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+
+                                    <div class="col-12  mb-2">
+                                        <h5> Opcional: </h5>
+                                    </div>
+                                   
+                                    <div class="col-5  mb-4">
+                                        <input type="text" disabled="" readonly class="form-control-plaintext"  value="5. ACREDITACIÓN DE ORGANIZACIÓN DE NIVEL INFERIOR QUE LAS COMPONEN">
+                                    </div>
+                                    <div class="col-5  mb-4">
+                                        <input class="form-control" type="file" id="sextoArchivo">
+                                    </div>
+                                    <div class="col-2  mb-4">
+                                        <a href="#" onclick="validarPdfSeis()"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="modalUno" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen-sm-down">
+                    <div class="modal-content" style="width: 33.5rem">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Vista previa</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="visorPrimerArchivo">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="modalDos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen-sm-down">
+                    <div class="modal-content" style="width: 33.5rem">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Vista previa</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="visorSegundoArchivo">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="modalTres" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen-sm-down">
+                    <div class="modal-content" style="width: 33.5rem">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Vista previa</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="visorTercerArchivo">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="modalCuatro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen-sm-down">
+                    <div class="modal-content" style="width: 33.5rem">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Vista previa</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="visorCuartoArchivo">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="modalCinco" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen-sm-down">
+                    <div class="modal-content" style="width: 33.5rem">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Vista previa</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="visorQuintoArchivo">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="/js/vista-previa-pdf.js"></script>
+        </div>
+
+    </body>
+</html>

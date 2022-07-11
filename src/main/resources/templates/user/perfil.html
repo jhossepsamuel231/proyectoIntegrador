@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layoutDashboard}">
+    <head th:replace="layout/layoutDashboard :: head">
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container-fluid p-3 " layout:fragment="page-content">
+            <nav class="navbar navbar-light bg-light m-2">
+                <h4 class="ps-3"><i class="fa-solid fa-gauge me-2"></i>Perfil</h4>
+            </nav>
+
+            <form action="action" class="d-flex justify-content-center align-items-center">
+
+                <div class="card mb-3 p-3" style="max-width: 50rem;">
+                    <div class="row g-0">
+                        <div class="col-md-5 d-flex justify-content-center align-items-center">
+                            <img src="/imagesLayout/perfil.png" class="img-fluid" alt="logo">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title">Nombre: </h5>
+                                <p class="card-text">Jhosep Samuel</p>
+                                <h5 class="card-title">Llacctahuaman: </h5>
+                                <p class="card-text">Llacctahuaman Cabrera</p>
+                                <h5 class="card-title">Cargo: </h5>
+                                <p class="card-text">Gerente</p>
+                                <h5 class="card-title">Usuario: </h5>
+                                <p class="card-text">jhos</p>
+                                <h5 class="card-title">Contraseña: </h5>
+                                <p class="card-text">123</p>
+                                <a href="#" class="btn btn-success">Editar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </body>
+</html>

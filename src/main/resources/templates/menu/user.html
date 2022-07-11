@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layoutDashboard}">
+    <head th:replace="layout/layoutDashboard :: head">
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container-fluid p-3" layout:fragment="page-content">
+            <nav class="navbar navbar-light bg-light m-2">
+                <h4 class="ps-3"><i class="fa-solid fa-gauge me-2"></i>Dasboard</h4>
+            </nav>
+            <div class="container-fluid ">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-12 col-md-6 col-lg-4 mt-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Cuenta</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a th:href="@{/principal/menu/user/perfil}" class="btn btn-success align-items-center">
+                                    <strong class="me-2">Usuarios</strong><i class="fa-solid fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mt-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Registrar RUOS</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a th:href="@{/principal/menu/user/registroRuos}" class="btn btn-success">
+                                    <strong class="me-2">Lectores</strong><i class="fa-solid fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mt-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Actualizar Datos</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a th:href="@{/principal/menu/user/uploadDate}" class="btn btn-success">
+                                    <strong class="me-2">Libros</strong><i class="fa-solid fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mt-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Plantillas</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a th:href="@{/principal/menu/user/plantillas}" class="btn btn-success">
+                                    <strong class="me-2">Editoriales</strong><i class="fa-solid fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mt-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Historial de Solicitudes</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a th:href="@{/principal/menu/user/solicisEnviadas}" class="btn btn-success">
+                                    <strong class="me-2">Autores</strong><i class="fa-solid fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--<!-- comment -->
+            </div> <br>
+            <div class="row ">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <div class="card mx-auto" style="width: 60%;">
+                        <h2 class="card-header text-center">Pasos para RUOS</h2>
+                        <div class="card-body">
+                            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <h4>Subir Documentos:</h4>
+                                        <img src="/imagesLayout/subirSolicitud.png" class="d-block w-100" alt="logo">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h4>Enviar Solicitud:</h4>
+                                        <img src="/imagesLayout/enviarArchivo.png" class="d-block w-100" alt="logo">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h4>Evaluacion Documentos:</h4>
+                                        <img src="/imagesLayout/evaluacionSolicitud.png" class="d-block w-100" alt="logo">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h4>Aprobacion Final:</h4>
+                                        <img src="/imagesLayout/finalSolicitud.png" class="d-block w-100" alt="logo">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

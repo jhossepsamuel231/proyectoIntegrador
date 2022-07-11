@@ -4,8 +4,12 @@
  */
 package com.example.EjercicioUno.controller;
 
+import com.example.EjercicioUno.dto.PersonaDto;
+import com.example.EjercicioUno.entity.Usuario;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  *
@@ -19,12 +23,14 @@ public class HomeController {
     }
     
     @GetMapping("/login")
-    public String login(){
+    public String login(Model model){
+        model.addAttribute("usuario", new Usuario());
         return "login";
     }
     
     @GetMapping("/register")
-    public String register(){
+    public String register(Model model){
+        model.addAttribute("personaDto", new PersonaDto());
         return "register";
     }
 }

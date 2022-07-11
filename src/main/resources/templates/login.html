@@ -3,37 +3,61 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/82a228b425.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/login.css"/>
+        <link rel="stylesheet" href="css/stylesLogin.css"/>
         <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/styles.css"/>
     </head>
     <body>
-        <header class="fondoImg">
-            <div class="login">
-                <div class="form">
-                    <img src="imagesLayout/logoUno.png" width="90">
-                    <div class="groupUno">
-                        <input required="" type="text" class="input">
-                        <span class="highlight"></span>
-                        <span class="bar"></span>
-                        <label>Usuario</label>
+         <div class="container">
+        <div class="row justify-content-center pt-5 mt-5 m-1">
+            <div class="col-md-6 col-sm-8 col-xl-4 col-lg-5 formulario">
+                <form method="post" th:action="@{/principal/menu/user/logear}" th:object="${usuario}">
+                    <div class="justify-content-center text-center">
+                        <img src="imagesLayout/logoUno.png" width="90">
                     </div>
-
-                    <div class="groupDos">
-                        <input required="" type="password" class="input">
-                        <span class="highlight"></span>
-                        <span class="bar"></span>
-                        <label>Password</label>
+                    <div class="form-group text-center pt-3">
+                        <h1 class="text-light">INICIAR SESIÓN</h1>
                     </div>
-                    <button class="buttonLogin"> Sign In </button>
-                </div>
+                    <div class="form-group mx-sm-4 pt-3">
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            th:field="*{usu}"
+                            required=""
+                            placeholder="Ingrese su Usuario">
+                    </div>
+                    <div class="form-group mx-sm-4 pb-3 mt-4">
+                        <input 
+                            type="password" 
+                            class="form-control" 
+                            th:field="*{contrasenia}"
+                            required=""
+                            placeholder="Ingrese su Contraseña">
+                    </div>
+                    <div class="form-group mx-sm-4 pb-2">
+                        <button type="submit" class="btn btn-block ingresar" > INGRESAR</button>
+                    </div>
+                    <div class="form-group mx-sm-4 text-right">
+                        <span class=""><a href="#" class="olvide">Olvide mi contraseña?</a></span>
+                    </div>
+                    <div class="form-group  mt-4">
+                        <span class="text-start"><a href="/" class="olvide2 ">VOLVER</a></span>
+                        <span class="text-end"><a href="/register" class="olvide1 ">REGISTRARSE</a></span>
+                    </div>
+                </form>
             </div>
-        </header>
-        <script src="/js/bootstrap.min.js"></script>
+        </div>
+    </div>
+
+
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/jsLayout/bootstrap.min.js"></script>
     </body>
 </html>

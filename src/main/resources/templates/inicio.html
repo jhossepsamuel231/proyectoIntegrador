@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layout/layout-principal}">
@@ -55,11 +60,7 @@
                                 <div class="h-body text-center">
                                     <p>Sube los documentos de tu organizacion social</p>
                                 </div>
-                            </div>                        
-                        </div> 
-
-                        <div class="row">
-
+                            </div>  
                             <div class="col-md-3 col-sm-6 highlight">
                                 <div class="h-caption">
                                     <h4><i class="fa-solid fa-envelope-circle-check"></i>Enviar Solicitud </h4>
@@ -68,74 +69,65 @@
                                     <p>Envia todos los archivos subidos</p>
                                 </div>
                             </div>
+                        </div> 
 
-                            <div class="col-md-3 col-sm-6 highlight">
-                                <div class="h-caption">
-                                    <h4><i class="fa-solid fa-magnifying-glass"></i>Evaluacion de Documentos</h4>
-                                </div>
-                                <div class="h-body text-center">
-                                    <p>Podrás observar en el proceso de evaluacion que se encuentra tu solicitud</p>
-                                </div>
-                            </div>
 
-                            <div class="col-md-3 col-sm-6 highlight">
-                                <div class="h-caption">
-                                    <h4><i class="fa-solid fa-thumbs-up"></i>Aprobacion Final</h4>
-                                </div>
-                                <div class="h-body text-center">
-                                    <p>Podras ver el informe del estado de tu solicitud</p>
-                                </div>
-                            </div>
-                        </div>
+
+
+
+
+
+
+
                     </div>
                 </div>
             </div>
-<div class="container"> 
-     <h2 class="text-center top-space">Plantillas:</h2>
-        <br>
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th scope="col"></th>
-                        <th scope="col">Nombre del Formato</th>
-                        <th scope="col">Modelo Formato</th>
-                        <th scope="col">Modelo Para rellenar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>SOLICITUD PARA REGISTRO NUEVO DE ORGANIZACIÓN</td>
-                        <td><i class="fa-solid fa-file-pdf"></i></td>
-                        <td><i class="fa-solid fa-file-lines"></i></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>SOLICITUD PARA ACTUALIZACIÓN DE ORGANIZACIÓN</td>
-                        <td><i class="fa-solid fa-file-pdf"></i></td>
-                        <td><i class="fa-solid fa-file-lines"></i></td>
-                    </tr>
-                    <tr>
-                        <td scope="row">3</td>
-                        <td>ACTA DE ELECCIÓN DEL ÓRGANO DIRECTIVO</td>
-                        <td><i class="fa-solid fa-file-pdf"></i></td>
-                        <td><i class="fa-solid fa-file-lines"></i></td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>ESTATUTO Y ACTA DE APROBACIÓN</td>
-                        <td><i class="fa-solid fa-file-pdf"></i></td>
-                        <td><i class="fa-solid fa-file-lines"></i></td>
-                    </tr>
-                    <tr>
-                        <th>5</th>
-                        <td>ACTA DE FUNDACIÓN O DE CONSTITUCIÓN</td>
-                        <td><i class="fa-solid fa-file-pdf"></i></td>
-                        <td><i class="fa-solid fa-file-lines"></i></td>
-                    </tr>
-                </tbody>
-            </table>
-</div>
+            <div class="container"> 
+                <h2 class="text-center top-space">Plantillas:</h2>
+                <br>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Nombre del Formato</th>
+                            <th scope="col">Modelo Formato</th>
+                            <th scope="col">Modelo Para rellenar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>SOLICITUD PARA REGISTRO NUEVO DE ORGANIZACIÓN</td>
+                            <td><a download="MODELO_SOLICITUD_NUEVO_GPV" href="/plantillas/MODELO_SOLICITUD_NUEVO_GPV_PDF.pdf"><i class="fa-solid fa-file-pdf"></i></td>
+                            <td> <a download="MODELO_SOLICITUD_NUEVO_GPV" href="/plantillas/MODELO_SOLICITUD_NUEVO_GPV.docx"> <i class="fa-solid fa-file-lines"></i></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>SOLICITUD PARA ACTUALIZACIÓN DE ORGANIZACIÓN</td>
+                            <td><a download="MODELO_SOLICITUD_ACTUALIZACION" href="/plantillas/MODELO_SOLICITUD_ACTUALIZACION_PDF.pdf"><i class="fa-solid fa-file-pdf"></i></td>
+                            <td> <a download="MODELO_SOLICITUD_ACTUALIZACION" href="/plantillas/MODELO_SOLICITUD_ACTUALIZACION_GPV_WORD.docx"> <i class="fa-solid fa-file-lines"></i></td>
+                        </tr>
+                        <tr>
+                            <td scope="row">3</td>
+                            <td>ACTA DE ELECCIÓN DEL ÓRGANO DIRECTIVO</td>
+                            <td><a download="MODELO_ELECCION_ORGANO_DIRECTIVO" href="/plantillas/MODELO_ELECCION_ORGANO_DIRECTIVO_PDF.pdf"><i class="fa-solid fa-file-pdf"></i></td>
+                            <td> <a download="MODELO_ELECCION_ORGANO_DIRECTIVO" href="/plantillas/MODELO_ELECCION_ORGANO_DIRECTIVO.docx"> <i class="fa-solid fa-file-lines"></i></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>ESTATUTO Y ACTA DE APROBACIÓN</td>
+                            <td><a download="MODELO_ESTATUTO_ACTA_APROBACION" href="/plantillas/MODELO_ESTATUTO_ACTA_APROBACION_PDF.pdf"><i class="fa-solid fa-file-pdf"></i></td>
+                            <td> <a download="MODELO_ESTATUTO_ACTA_APROBACION" href="/plantillas/MODELO_ESTATUTO_ACTA_APROBACION.docx"> <i class="fa-solid fa-file-lines"></i></td>
+                        </tr>
+                        <tr>
+                            <th>5</th>
+                            <td>ACTA DE FUNDACIÓN O DE CONSTITUCIÓN</td>
+                            <td> <a download="MODELO_ACTA_CONSTITUCION_ASOCIACION" href="/plantillas/MODELO_ACTA_CONSTITUCION_ASOCIACION_PDF.pdf"><i class="fa-solid fa-file-pdf"></i></a></td>
+                            <td> <a download="MODELO_ACTA_CONSTITUCION_ASOCIACION" href="/plantillas/MODELO_ACTA_CONSTITUCION_ASOCIACION.docx"> <i class="fa-solid fa-file-lines"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
     </body>

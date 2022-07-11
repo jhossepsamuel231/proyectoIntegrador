@@ -1,14 +1,207 @@
-#head {
-    background:#181015 url( ../imagesLayout/loginUno.jpg) ;
-    width: 100%;
-    height: 100vh;
+body{
+    background-image: url(../imagesLayout/loginUno.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
-.card {
-    width: 30%;
-    height: 70vh;
-    border-radius: 30px;
-    background: #419a2b;
-    box-shadow: 10px 10px 10px #21b14c,
-                -10px -10px 10px #6cde2f;
-    
-   }
+
+
+.formulario {
+    background: rgba(0, 0, 0, .1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+    color: white;
+}
+
+.form-control {
+    background: rgba(0, 0, 0, .3);
+    border-style: none;
+    transition: 0.5s ease-in;
+    outline: none;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    background: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: white;
+}
+
+.ingresar {
+    background: #222A3F;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 700!important;
+    color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+    transition: 0.5s ease-in;
+    width: 100%;
+}
+
+.ingresar:hover {
+    color: white;
+}
+
+.olvide {
+    color: white;
+    text-decoration-style: none;
+    text-decoration-line: none;
+}
+
+.olvide:hover {
+    color: white;
+    text-decoration-style: none;
+    text-decoration-line: none;
+    cursor: pointer;
+}
+
+.olvide1 {
+    color: white;
+    text-decoration-style: none;
+    text-decoration-line: none;
+    font-size: 20px;
+    font-weight: 700!important;
+    /* border: 2px solid white; */
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .5);
+}
+
+.olvide1:hover {
+    color: white;
+    text-decoration-style: none;
+    text-decoration-line: none;
+    cursor: pointer;
+}
+
+.olvide2{
+    color: white;
+    text-decoration-style: none;
+    text-decoration-line: none;
+    font-size: 20px;
+    font-weight: 700!important;
+    /* border: 2px solid white; */
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .5);
+}
+
+.olvide2:hover {
+    color: white;
+    text-decoration-style: none;
+    text-decoration-line: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* From uiverse.io by @Jedi-hongbin */
+.btnVolver{
+ display: flex;
+ height: 3em;
+ width: 100px;
+ align-items: center;
+ justify-content: center;
+ background-color: #eeeeee4b;
+ border-radius: 3px;
+ letter-spacing: 1px;
+ transition: all 0.2s linear;
+ cursor: pointer;
+ border: none;
+ background: rgb(9, 112, 49);
+}
+
+.btnVolver > svg {
+ margin-right: 5px;
+ margin-left: 5px;
+ font-size: 20px;
+ transition: all 0.4s ease-in;
+}
+
+.btnVolver:hover > svg {
+ font-size: 1.2em;
+ transform: translateX(-5px);
+}
+
+.btnVolver:hover {
+ box-shadow: 9px 9px 33px #13af4c, -9px -9px 33px #56b868;
+ transform: translateY(-2px);
+}
+
+
+
+/* From uiverse.io by @nikk7007 */
+.cont {
+ display: flex;
+ align-items: center;
+}
+
+.inputCheck[type="checkbox"] {
+ height: 1.7rem;
+ width: 1.7rem;
+ margin: 5px;
+ display: inline-block;
+ appearance: none;
+ position: relative;
+ background-color: #F2ECFF;
+ border-radius: 15%;
+ cursor: pointer;
+ overflow: hidden;
+}
+
+.inputCheck[type="checkbox"]::after {
+ content: '';
+ display: block;
+ height: 0.9rem;
+ width: .4rem;
+ border-bottom: .31rem solid #a0ffe7;
+ border-right: .31rem solid #a0ffe7;
+ opacity: 0;
+ transform: rotate(45deg) translate(-50%, -50%);
+ position: absolute;
+ top: 45%;
+ left: 21%;
+ transition: .25s ease;
+}
+
+.inputCheck[type="checkbox"]::before {
+ content: '';
+ display: block;
+ height: 0;
+ width: 0;
+ background-color: #00C896;
+ border-radius: 50%;
+ opacity: .5;
+ transform: translate(-50%, -50%);
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transition: .3s ease;
+}
+
+.inputCheck[type="checkbox"]:checked::before {
+ height: 130%;
+ width: 130%;
+ opacity: 100%;
+}
+
+.inputCheck[type="checkbox"]:checked::after {
+ opacity: 100%;
+}
+
+.spanLetra {
+ font-size: 12px;
+}

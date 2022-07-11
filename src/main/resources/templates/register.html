@@ -1,12 +1,141 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
 <html xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{layout/layout}">
-    <head th:replace="layout/layout :: head">
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/82a228b425.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/stylesRegister.css"/>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
     </head>
-    <div class="container-fluid" layout:fragment="page-content">
-        <h1>gaaaa</h1>
-        </div>
+    <body>
+        <header class="fondoImg d-flex justify-content-center align-items-center">
+            <div class="login ">
+                <div class="form d-flex justify-content-center align-items-center">
+
+                    <form method="post" th:action="@{/principal/menu/user/crear-persona}" th:object="${personaDto}">
+
+                        <div class="card " style=" width: 100%; height: 100%;">
+                            <div class="card-header ">
+                                <h3 class="text-center">Municipalidad de</h3>
+                                <h3 class="text-center">Chaclacayo</h3>
+                            </div>
+                            <div class="card-body ">
+                                <div class="row g-2">
+                                    <div class="col-md-12"><h2>Crear Cuenta:</h2></div>
+                                    <div class="col-md-4">
+                                        <label for="nombre">Nombres:</label>
+                                        <input type="text" 
+                                               class="form-control" 
+                                               required=""
+                                               th:field="*{nombre}"
+                                               id="nombre" 
+                                               placeholder="Ingrese su Nombre">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="apellidoPaterno">Apellido Paterno:</label>
+                                        <input type="text" 
+                                               class="form-control" 
+                                               required=""
+                                               th:field="*{apelPaterno}"
+                                               id="apellidoPaterno" 
+                                               placeholder="Ingrese su apellido paterno">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="apellidoMaterno">Apellido Materno:</label>
+                                        <input type="text" 
+                                               class="form-control" 
+                                               required=""
+                                               th:field="*{apelMaterno}"
+                                               id="apellidoMaterno" 
+                                               placeholder="Ingrese su apellido materno">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="dni">DNI:</label>
+                                        <input type="number" 
+                                               class="form-control" 
+                                               required=""
+                                               th:field="*{dni}"
+                                               id="dni" 
+                                               pattern="{0-9}{10}" 
+                                               placeholder="Ingrese su DNI">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="correo">Correo:</label>
+                                        <input type="email" 
+                                               class="form-control" 
+                                               required=""
+                                               th:field="*{correo}"
+                                               id="correo" placeholder="Ingrese su correo electronico">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="telefono">Telefono:</label>
+                                        <input type="number" 
+                                               class="form-control" 
+                                               required=""
+                                               id="telefono" pattern="{0-8}" 
+                                               placeholder="Ingrese su numero telefonico">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="telefono">Direccion:</label>
+                                        <input type="text" 
+                                               class="form-control" 
+                                               required=""
+                                               th:field="*{direccion}"
+                                               id="direccion" 
+                                               placeholder="Ingrese su numero telefonico">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                                        <input type="date" 
+                                               class="form-control" 
+                                               required=""
+                                               th:field="*{fecNacimiento}"
+                                               id="fechaNacimiento" placeholder="Ingrese su fecha de nacimiento">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="contrasenia">Contraseña:</label>
+                                        <input type="password" 
+                                               class="form-control"
+                                               required=""
+                                               th:field="*{contrasenia}"
+                                               id="contrasenia" placeholder="Ingrese su contrasenia">
+                                    </div>
+                                    <div class="col-md-2 ">
+                                        <a th:href="@{/}" class="btnVolver text-center">
+                                            Volver
+                                        </a>
+                                    </div>
+                                    <div class="col-md-7 mt-5">
+                                        <input type="checkbox" name="aceptar" id="aceptar"> 
+                                        <a href="#" class="text-decoration-none fst-italic" style="color: #000" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> 
+                                             HE LEÍDO Y ACEPTO LOS TÉRMINOS Y CONDICIONES
+                                        </a>
+                                    </div>
+                                    <div class="col-md-2 mt-4">
+                                        <button type="submit" class="icon-btn add-btn">
+                                            <div class="add-icon"></div>
+                                            <div class="btn-txt">Registrarme</div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+
+                </div>
+
+        </header>
+
+
+
+
+        <script src="/js/bootstrap.min.js"></script>
+    </body>
 </html>

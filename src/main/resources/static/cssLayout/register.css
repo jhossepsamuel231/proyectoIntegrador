@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.fondoImg {
+    background: #181015 url(../imagesLayout/registerUno.jpg)no-repeat;
+    text-align: center;
+    width: auto;
+    height: 150vh;
+}
+
+.register {
+    width: 90%;
+    height: auto;
+    border: 1px solid #CCC;
+    background-color: rgba(179, 179, 179, 0.741);
+    background-size: cover;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.register .form {
+    width: 100%;
+    height: 100%;
+    padding: 15px 25px;
+}
+
+
+.register img {
+    width: 50%;
+}
+
+
+
+::-webkit-input-placeholder {
+    color: #56934e;
+}
+
+
+
+
+
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+
+.cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+}
+
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+    width: 100%;
+    background: #b1dae7;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active {
+    transform: scale(0.95);
+}
