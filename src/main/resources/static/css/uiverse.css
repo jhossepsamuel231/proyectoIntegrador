@@ -1,54 +1,70 @@
+/* From uiverse.io by @NorthFishHasNa */
 .button {
- height: 2.8em;
- width: 9em;
- background: transparent;
- -webkit-animation: jello-horizontal 0.9s both;
- animation: jello-horizontal 0.9s both;
- border: 2px solid #016DD9;
- outline: none;
- color: #016DD9;
+ display: inline-block;
+ border-radius: 4px;
+ background-color: #1b7842;
+ border: none;
+ color: #FFFFFF;
+ text-align: center;
  font-size: 17px;
+ padding: 16px;
+ width: 130px;
+ transition: all 0.5s;
+ cursor: pointer;
+ margin: 5px;
 }
 
-.button:hover {
- background: #016DD9;
- color: #ffffff;
- animation: squeeze3124 0.9s both;
+.button .span {
+ cursor: pointer;
+ display: inline-block;
+ position: relative;
+ transition: 0.5s;
 }
 
-@keyframes squeeze3124 {
- 0% {
-  -webkit-transform: scale3d(1, 1, 1);
-  transform: scale3d(1, 1, 1);
- }
+.button .span:after {
+ content: '»';
+ position: absolute;
+ opacity: 0;
+ top: 0;
+ right: -15px;
+ transition: 0.5s;
+}
 
- 30% {
-  -webkit-transform: scale3d(1.25, 0.75, 1);
-  transform: scale3d(1.25, 0.75, 1);
- }
+.button:hover .span {
+ padding-right: 15px;
+}
 
- 40% {
-  -webkit-transform: scale3d(0.75, 1.25, 1);
-  transform: scale3d(0.75, 1.25, 1);
- }
+.button:hover .span:after {
+ opacity: 1;
+ right: 0;
+}
 
- 50% {
-  -webkit-transform: scale3d(1.15, 0.85, 1);
-  transform: scale3d(1.15, 0.85, 1);
- }
 
- 65% {
-  -webkit-transform: scale3d(0.95, 1.05, 1);
-  transform: scale3d(0.95, 1.05, 1);
- }
 
- 75% {
-  -webkit-transform: scale3d(1.05, 0.95, 1);
-  transform: scale3d(1.05, 0.95, 1);
- }
+/* From uiverse.io by @satyamchaudharydev */
+/* this button is inspired from this -- https://www.newline.co/pricing */
+.btn-inicio{
+  --width: 150px;
+  --timing: 2s;
+  border: 0;
+  width: var(--width);
+  padding-block: 1em;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1em;
+  background: rgb(64, 192, 87);
+  transition: all 0.2s;
+  border-radius: 3px;
+}
 
- 100% {
-  -webkit-transform: scale3d(1, 1, 1);
-  transform: scale3d(1, 1, 1);
- }
+.btn-inicio:hover {
+  background-image: linear-gradient(to right, rgb(250, 82, 82), rgb(250, 82, 82) 16.65%, rgb(190, 75, 219) 16.65%, rgb(190, 75, 219) 33.3%, rgb(76, 110, 245) 33.3%, rgb(76, 110, 245) 49.95%, rgb(64, 192, 87) 49.95%, rgb(64, 192, 87) 66.6%, rgb(250, 176, 5) 66.6%, rgb(250, 176, 5) 83.25%, rgb(253, 126, 20) 83.25%, rgb(253, 126, 20) 100%, rgb(250, 82, 82) 100%);
+  animation: var(--timing) linear dance6123 infinite;
+  transform: scale(1.1) translateY(-1px);
+}
+
+@keyframes dance6123 {
+  to {
+    background-position: var(--width);
+  }
 }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layoutGerencia}">
+    <head th:replace="layout/layoutGerencia :: head">
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container-fluid p-3 " layout:fragment="page-content">
+            <nav class="navbar navbar-light bg-light m-2">
+                <h4 class="ps-3"><i class="fa-solid fa-gauge me-2"></i>Perfil</h4>
+            </nav>
+
+            <div class="container-fluid ">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-12 col-md-11 col-lg-10 mt-4">
+                        <div class="card  border-success">
+                            <div class="card-header bg-success bg-opacity-50">
+                                Registrar Junta
+                            </div>
+                            <div class="card-body">
+                                <form method="post" th:action="@{/solicitud/registrarSolicitud}" th:object="${solicitudDto}">
+                                    <h5 class="card-title">Datos de La Organizacion: </h5>
+                                    <input 
+                                        class="form-control mt-5 mb-4"
+                                        type="text"
+
+                                        id="razonSocial"
+                                        required=""
+                                        placeholder="Registre el codigo de la organizacion: ">
+
+                                    <input 
+                                        class="form-control mt-5 mb-4"
+                                        type="text"
+
+                                        id="razonSocial"
+                                        required=""
+                                        placeholder="Registre el nombre de la organizacion: ">
+
+                                    <input 
+                                        class="form-control mt-5 mb-4"
+                                        type="text"
+
+                                        id="razonSocial"
+                                        required=""
+                                        placeholder="Registre la zona de la organizacion: ">
+
+                                    <input 
+                                        class="form-control mt-5 mb-4"
+                                        type="text"
+
+                                        id="razonSocial"
+                                        required=""
+                                        placeholder="Registre el tipo de la organizacion: ">
+
+                                    <input 
+                                        class="form-control mt-5 mb-4"
+                                        type="text"
+
+                                        id="razonSocial"
+                                        required=""
+                                        placeholder="Registre el nivel de la organizacion: ">
+
+                                    <a class="btn btn-success" th:href="@{/principal/menu/gerencia/crearJunta}">
+                                        Guardar
+                                    </a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

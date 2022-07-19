@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layoutMesaParte}">
+    <head th:replace="layout/layoutMesaParte :: head">
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container-fluid p-3 " layout:fragment="page-content">
+            <nav class="navbar navbar-light bg-light m-2">
+                <h4 class="ps-3"><i class="fa-solid fa-gauge me-2"></i>Registros de RUOS</h4>
+            </nav>
+
+            <div class="container-fluid ">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-12 col-md-11 col-lg-10 mt-4">
+                        <form th:action="@{/principal/menu/mesadeparte/aceptandoDocs}" method="post">
+                            <div class="card border-success" th:object="${documentos}">
+                                <div class="card-header bg-success bg-opacity-50">
+                                    Lista de Datos de la organizacion
+                                </div>
+                                <input type="hidden" th:value="*{solicitud.id}" name="idSolicitud">
+                                <div class="card-body"> 
+                                    <button type="submit" class="btn btn-success">Aceptar</button>
+                                    <a class="btn btn-success" th:href="@{/principal/menu/mesadeparte/validarRUOS}">volver</a>
+                                </div>
+
+                                <table class="table table-success table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Archivo</th>
+                                            <th scope="col">Vista</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody >
+                                        <tr>
+                                            <td>1</td>
+                                            <td th:text="*{archivoUno}"></td>
+                                            <td>
+                                                <a>
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td th:text="*{archivoDos}"></td>
+                                            <td>
+                                                <a>
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td th:text="*{archivoTres}"></td>
+                                            <td>
+                                                <a>
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td th:text="*{archivoCuatro}"></td>
+                                            <td>
+                                                <a>
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td th:text="*{archivoCinco}"></td>
+                                            <td>
+                                                <a>
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td th:text="*{archivoSeis}"></td>
+                                            <td>
+                                                <a>
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td th:text="*{archivoSiete}"></td>
+                                            <td>
+                                                <a>
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td th:text="*{archivoOcho}"></td>
+                                            <td>
+                                                <a>
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td th:text="*{archivoNueve}"></td>
+                                            <td>
+                                                <a>
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div> 
+                        </form>
+                    </div>  
+                </div> 
+            </div>
+
+
+        </div>
+    </body>
+</html>

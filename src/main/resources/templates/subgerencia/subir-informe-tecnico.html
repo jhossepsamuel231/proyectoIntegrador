@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layoutSubGerencia}">
+    <head th:replace="layout/layoutSubGerencia :: head">
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container-fluid p-3 " layout:fragment="page-content">
+            <nav class="navbar navbar-light bg-light m-2">
+                <h4 class="ps-3"><i class="fa-solid fa-gauge me-2"></i>Subir Informe Tecnico</h4>
+            </nav>
+            <div th:object="${solicitud}">
+
+
+
+
+                <div class="container-fluid ">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-12 col-md-11 col-lg-10 mt-4">
+                            <div class="card  border-success">
+                                <div class="card-header bg-success bg-opacity-50">
+                                    Subir Informe Tecnico
+                                </div>
+                                <div class="card-body">
+                                    <form enctype="multipart/form-data"  method="post" th:action="@{/principal/menu/subgerencia/subiendoInfoTecnico}">
+                                        <div class="row">
+                                            <input type="hidden" th:value="*{id}" name="idSolicitud">
+                                            <div class="col-5 mt-3 mb-4">
+                                                <input type="text" disabled="" readonly class="form-control-plaintext" value="SUBIR INFORME TECNICO">
+                                            </div>
+                                            <div class="col-5 mt-3 mb-4">
+                                                <input name="informeTecnico" class="form-control" type="file" id="informeTecnico">
+                                            </div>
+                                            <div class="col-2 mt-3 mb-4">
+                                                <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                            </div>
+
+                                            <div class="col-4  mb-4">
+                                                <button type="submit" class="btn btn-success align-items-center"> 
+                                                    <strong class="me-2">Subir Informe</strong><i class="fa-solid fa-angles-up"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </body>
+</html>

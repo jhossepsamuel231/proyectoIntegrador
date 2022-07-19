@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layoutSubGerencia}">
+    <head th:replace="layout/layoutSubGerencia :: head">
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container-fluid p-3 " layout:fragment="page-content">
+            <nav class="navbar navbar-light bg-light m-2">
+                <h4 class="ps-3"><i class="fa-solid fa-gauge me-2"></i>Listado de Solicitudes</h4>
+            </nav>
+
+
+
+            <div class="container-fluid ">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-12 col-md-11 col-lg-10 mt-4">
+                        <div class="card border-success">
+                            <div class="card-header bg-success bg-opacity-50">
+                                Lista de las Solicitudes
+                            </div>
+                            <div class="card-body"> 
+                            </div>
+
+                            <table class="table table-success table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nombre Organizacion</th>
+                                        <th scope="col">Nivel Organizacion</th>
+                                        <th scope="col">Tipo Organizacion</th>
+                                        <th scope="col">Fecha Registro</th>
+                                        <th scope="col">Subir Informe Tecnico</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr th:each="soliInfotecnico : ${listarSolicitud}">
+                                        <td th:text="${soliInfotecnico.id}"></td>
+                                        <td th:text="${soliInfotecnico.nombre_org}"></td>
+                                        <td th:text="${soliInfotecnico.nivelOrganizacion.nivelOrg}"></td>
+                                        <td th:text="${soliInfotecnico.tipoOrganizacion.nombreTipo}"></td>
+                                        <td th:text="${soliInfotecnico.fecha_registro}"></td>
+                                        <td>
+                                            <a th:href="@{/principal/menu/subgerencia/subirInformTecnico/} + ${soliInfotecnico.id}">
+                                                <i class="fa-solid fa-eye"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div> 
+                    </div>  
+                </div> 
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </body>
+</html>

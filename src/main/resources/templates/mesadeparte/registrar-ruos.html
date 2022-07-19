@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layoutMesaParte}">
+    <head th:replace="layout/layoutMesaParte :: head">
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container-fluid p-3 " layout:fragment="page-content">
+            <nav class="navbar navbar-light bg-light m-2">
+                <h4 class="ps-3"><i class="fa-solid fa-gauge me-2"></i>Registros de RUOS</h4>
+            </nav>
+
+            <div class="container-fluid ">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-12 col-md-11 col-lg-10 mt-4">
+                        <div class="card border-success">
+                            <div class="card-header bg-success bg-opacity-50">
+                                Lista de Datos de la organizacion
+                            </div>
+                            <div class="card-body"> 
+                            </div>
+
+                            <table class="table table-success table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Fecha de Registro</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Accion</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr th:each="validarSolicitud : ${validarSolicitud}">
+                                        <td th:text="${validarSolicitud.id}"></td>
+                                        <td th:text="${validarSolicitud.fecha_registro}"></td>
+                                        <td th:text="${validarSolicitud.nombre_org}"></td>
+                                        <td>
+                                            <a th:href="@{/principal/menu/mesadeparte/archivoRuos/} + ${validarSolicitud.id}">
+                                                <i class="fa-solid fa-eye"></i>
+                                            </a>
+                                            <a th:href="@{/principal/menu/mesadeparte/eliminarSoli/} + ${validarSolicitud.id}" title="Eliminar Producto">
+                                                <i class='fa-solid fa-trash-can text-danger me-3'></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div> 
+                    </div>  
+                </div> 
+            </div>
+
+
+        </div>
+    </body>
+</html>

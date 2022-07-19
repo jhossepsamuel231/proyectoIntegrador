@@ -17,9 +17,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class HomeController {
-    @GetMapping
+    
+    @GetMapping("/inicio")
     public String inicio(){
         return "inicio";
+    }
+    
+    @GetMapping
+    public String principal(){
+        return "principal";
     }
     
     @GetMapping("/login")

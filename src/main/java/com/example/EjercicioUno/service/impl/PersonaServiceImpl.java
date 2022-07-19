@@ -46,7 +46,7 @@ public class PersonaServiceImpl implements PersonaService {
         Persona personaCreada = personaRepository.save(personaIngresa);
                 
         Usuario usuarioIngresa = new Usuario();        
-        usuarioIngresa.setIdPersona(personaCreada.getIdPersona());
+        usuarioIngresa.setPersona(personaCreada);
         usuarioIngresa.setUsu(personaDto.getNombre());
         usuarioIngresa.setContrasenia(personaDto.getContrasenia());
      

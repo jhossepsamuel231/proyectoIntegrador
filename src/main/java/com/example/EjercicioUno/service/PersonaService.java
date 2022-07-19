@@ -12,6 +12,7 @@ import com.example.EjercicioUno.entity.Usuario;
  *
  * @author HP
  */
+
 public interface PersonaService {
      
     Persona crear(PersonaDto personaDto);

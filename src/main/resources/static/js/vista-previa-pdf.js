@@ -1,4 +1,43 @@
 /*----------------Archivo Uno---------------------*/
+function guardarDatos() {
+    Swal.fire({
+        position: 'top-end',
+        icon: 'Enviando',
+        title: 'Envio correcto',
+        showConfirmButton: false,
+        timer: 1500
+    });
+}
+
+function guardarDatos() {
+    let timerInterval
+    Swal.fire({
+        title: 'Subiendo Archivos',
+        html: 'Enviando en <b></b> milisegundos',
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: () => {
+            Swal.showLoading()
+            const b = Swal.getHtmlContainer().querySelector('b')
+            timerInterval = setInterval(() => {
+                b.textContent = Swal.getTimerLeft()
+            }, 100)
+        },
+        willClose: () => {
+            clearInterval(timerInterval)
+        }
+    }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+            console.log('I was closed by the timer')
+        }
+    })
+}
+
+
+
+
+
 
 function validarPdfUno() {
     var archivoInput = document.getElementById('primerArchivo');

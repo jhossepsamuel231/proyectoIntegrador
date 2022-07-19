@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout-primero}">
+    <head th:replace="layout/layout-primero :: head">
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid" layout:fragment="page-content">
+            <div class="container text-center">
+                <br> <br>
+                <div class="row-cols-auto">
+                    <div class="col-md-1">
+                        <label>Buscar: </label>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control " placeholder="Buscar:">
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-success">Buscar</button>
+                        <button class="btn btn-danger">Limpiar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="jumbotron top-space">
+
+
+                <button class="btn btn-primary">PEDF</button>
+                <button class="btn btn-succes">EXCEL</button>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">CODIGO DE ORGANIZACION</th>
+                            <th scope="col">NOMBRE DE ORGANIZACION</th>
+                            <th scope="col">NIVEL</th>
+                            <th scope="col">ZONA</th>
+                            <th scope="col">INICIO VIGENCIA</th>
+                            <th scope="col">FIN VIGENCIA</th>
+                            <th scope="col">TIPO DE ORGANIZACION</th>
+                            <th scope="col">DESCARGAR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>20220001</td>
+                            <td>Vaso de Leche</td>
+                            <td>Local</td>
+                            <td>Cercado de Lima</td>
+                            <td>2022-03-01</td>
+                            <td>2026-03-01</td>
+                            <td>Organziacion Vecinal</td>
+                            <td> <a href="/plantillas/MODELO_SOLICITUD_NUEVO_GPV.docx"> <i class="fa-solid fa-file-lines"></i></td>
+                        </tr>
+                        <tr>
+                            <td>20220002</td>
+                            <td>Vaso de Leche</td>
+                            <td>Local</td>
+                            <td>Cercado de Lima</td>
+                            <td>2022-03-01</td>
+                            <td>2026-03-01</td>
+                            <td>Organziacion Vecinal</td>
+                            <td> <a download="MODELO_SOLICITUD_NUEVO_GPV" href="/plantillas/MODELO_SOLICITUD_NUEVO_GPV.docx"> <i class="fa-solid fa-file-lines"></i></td>
+                        </tr>
+                        <tr>
+                            <td>20220003</td>
+                            <td>Vaso de Leche</td>
+                            <td>Local</td>
+                            <td>Cercado de Lima</td>
+                            <td>2022-03-01</td>
+                            <td>2026-03-01</td>
+                            <td>Organziacion Vecinal</td>
+                            <td> <a download="MODELO_SOLICITUD_NUEVO_GPV" href="/plantillas/MODELO_SOLICITUD_NUEVO_GPV.docx"> <i class="fa-solid fa-file-lines"></i></td>
+                        </tr>
+                        <tr>
+                            <td>20220004</td>
+                            <td>Vaso de Leche</td>
+                            <td>Local</td>
+                            <td>Cercado de Lima</td>
+                            <td>2022-03-01</td>
+                            <td>2026-03-01</td>
+                            <td>Organziacion Vecinal</td>
+                            <td> <a download="MODELO_SOLICITUD_NUEVO_GPV" href="/plantillas/MODELO_SOLICITUD_NUEVO_GPV.docx"> <i class="fa-solid fa-file-lines"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
