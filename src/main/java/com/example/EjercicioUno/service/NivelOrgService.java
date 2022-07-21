@@ -13,4 +13,6 @@ import java.util.List;
  */
 public interface NivelOrgService {
     List<NivelOrganizacion> listaNivelOrg();
+
+    NivelOrganizacion encontrarNivelById(Long id);
 }

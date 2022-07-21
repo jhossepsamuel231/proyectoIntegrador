@@ -25,51 +25,50 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 Registrar Junta
                             </div>
                             <div class="card-body">
-                                <form method="post" th:action="@{/solicitud/registrarSolicitud}" th:object="${solicitudDto}">
-                                    <h5 class="card-title">Datos de La Organizacion: </h5>
-                                    <input 
-                                        class="form-control mt-5 mb-4"
-                                        type="text"
+                                <form method="post" th:action="@{/principal/menu/gerencia/crearJunta}" th:object="${organizacionDto}">
 
-                                        id="razonSocial"
-                                        required=""
-                                        placeholder="Registre el codigo de la organizacion: ">
+                                        <input th:value="${idSolicitud}" type="text" >
 
-                                    <input 
-                                        class="form-control mt-5 mb-4"
-                                        type="text"
+                                        <h5 class="card-title">Datos de La Organizacion: </h5>
 
-                                        id="razonSocial"
-                                        required=""
-                                        placeholder="Registre el nombre de la organizacion: ">
+                                        <input
+                                            class="form-control mt-5 mb-4"
+                                            type="text"
+                                            th:field="*{codigo}"
+                                            placeholder="Registre el codigo de la organizacion: ">
 
-                                    <input 
-                                        class="form-control mt-5 mb-4"
-                                        type="text"
 
-                                        id="razonSocial"
-                                        required=""
-                                        placeholder="Registre la zona de la organizacion: ">
+                                        <input
+                                                th:value="*{nombreOrganizacion}"
+                                                th:field="*{nombreOrganizacion}"
+                                                class="form-control mt-5 mb-4"
+                                                type="text"
+                                                placeholder="Registre el codigo de la organizacion: ">
 
-                                    <input 
-                                        class="form-control mt-5 mb-4"
-                                        type="text"
+                                        <input
+                                            class="form-control mt-5 mb-4"
+                                            type="hidden"
+                                            th:value="*{nivelOrg}"
+                                            th:field="*{nivelOrg}"
+                                            placeholder="Registre el nombre de la organizacion: ">
 
-                                        id="razonSocial"
-                                        required=""
-                                        placeholder="Registre el tipo de la organizacion: ">
+                                        <input
+                                            class="form-control mt-5 mb-4"
+                                            type="hidden"
+                                            th:value="*{tipoOrg}"
+                                            th:field="*{tipoOrg}"
+                                            placeholder="Registre la zona de la organizacion: ">
 
-                                    <input 
-                                        class="form-control mt-5 mb-4"
-                                        type="text"
+                                        <input
+                                            class="form-control mt-5 mb-4"
+                                            type="hidden"
+                                            th:value="*{local}"
+                                            th:field="*{local}"
+                                            placeholder="Registre el tipo de la organizacion: ">
 
-                                        id="razonSocial"
-                                        required=""
-                                        placeholder="Registre el nivel de la organizacion: ">
-
-                                    <a class="btn btn-success" th:href="@{/principal/menu/gerencia/crearJunta}">
+                                    <button type="submit" class="btn btn-success">
                                         Guardar
-                                    </a>
+                                    </button>
                                 </form>
                             </div>
                         </div>

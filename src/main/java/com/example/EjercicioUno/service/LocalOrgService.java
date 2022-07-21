@@ -13,4 +13,6 @@ import java.util.List;
  */
 public interface LocalOrgService {
     List<Local> listadLocalOrg();
+
+    Local encontrarLocalById(Long idLocal);
 }

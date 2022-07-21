@@ -13,4 +13,6 @@ import java.util.List;
  */
 public interface TipoOrgService {
     List<TipoOrganizacion> listadTipoOrg();
+
+    TipoOrganizacion encontrarTipoOrgById(Long id);
 }

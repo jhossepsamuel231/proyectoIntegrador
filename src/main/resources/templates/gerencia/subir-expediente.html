@@ -45,14 +45,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Los pablitos</td>
-                                                    <td>Zonal</td>
-                                                    <td>Deportivo</td>
-                                                    <td>2022-07-19 01:24:55.0</td>
+                                                <tr th:each="solicitud: ${solicitudes}">
+                                                    <td th:text="${solicitud.id}"></td>
+                                                    <td th:text="${solicitud.nombre_org}"></td>
+                                                    <td th:text="${solicitud.nivelOrganizacion.nivelOrg}"></td>
+                                                    <td th:text="${solicitud.tipoOrganizacion.nombreTipo}"></td>
+                                                    <td th:text="${solicitud.fecha_registro}"></td>
+
                                                     <td>
-                                                        <a class="btn btn-success" th:href="@{/principal/menu/gerencia/crearOrg}">
+                                                        <a class="btn btn-success" th:href="@{/principal/menu/gerencia/crearOrg/} + ${solicitud.id}">
                                                             Agregar Org
                                                         </a>
                                                     </td>

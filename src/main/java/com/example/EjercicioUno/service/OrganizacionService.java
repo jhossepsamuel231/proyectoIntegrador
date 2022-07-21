@@ -4,6 +4,7 @@
  */
 package com.example.EjercicioUno.service;
 
+import com.example.EjercicioUno.dto.OrganizacionDto;
 import com.example.EjercicioUno.entity.Organizacion;
 import java.util.List;
 
@@ -14,4 +15,6 @@ import java.util.List;
 
 public interface OrganizacionService {
     public List<Organizacion> ListarTodo();
+
+    Organizacion registrarOrganizacion(OrganizacionDto organizacionDto);
 }

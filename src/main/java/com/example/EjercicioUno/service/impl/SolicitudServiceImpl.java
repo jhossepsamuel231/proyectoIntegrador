@@ -121,5 +121,10 @@ public class SolicitudServiceImpl implements SolicitudService{
     public void Eliminar(Long id) {
         solicitudRepository.deleteById(id);
     }
-   
+
+    @Override
+    public List<Solicitud> listarSolicitudesCreacion() {
+        return solicitudRepository.crearOrganizacion();
+    }
+
 }

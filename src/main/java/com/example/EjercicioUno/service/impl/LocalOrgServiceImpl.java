@@ -26,5 +26,10 @@ public class LocalOrgServiceImpl implements LocalOrgService{
     public List<Local> listadLocalOrg() {
        return localOrgRepository.findAll();
     }
-    
+
+    @Override
+    public Local encontrarLocalById(Long idLocal) {
+        return localOrgRepository.findById(idLocal).orElse(null);
+    }
+
 }

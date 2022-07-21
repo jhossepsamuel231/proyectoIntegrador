@@ -26,5 +26,10 @@ public class NivelOrgServiceImpl implements NivelOrgService{
     public List<NivelOrganizacion> listaNivelOrg() {
         return nivelOrgRepository.findAll();
     }
-    
+
+    @Override
+    public NivelOrganizacion encontrarNivelById(Long id) {
+        return nivelOrgRepository.findById(id).orElse(null);
+    }
+
 }

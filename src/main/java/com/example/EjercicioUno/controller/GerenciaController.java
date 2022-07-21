@@ -4,6 +4,10 @@
  */
 package com.example.EjercicioUno.controller;
 
+import com.example.EjercicioUno.dto.OrganizacionDto;
+import com.example.EjercicioUno.entity.Organizacion;
+import com.example.EjercicioUno.entity.Solicitud;
+import com.example.EjercicioUno.service.OrganizacionService;
 import com.example.EjercicioUno.service.SolicitudService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,6 +27,9 @@ public class GerenciaController {
     
     @Autowired
     private SolicitudService solicitudService;
+
+    @Autowired
+    private OrganizacionService organizacionService;
     
     
     @GetMapping
@@ -50,23 +57,46 @@ public class GerenciaController {
     }
     
     @GetMapping("/subirExpediente")
-    public String generarExpdiente(){
+    public String generarExpdiente(Model model){
+
+        model.addAttribute("solicitudes", solicitudService.listarSolicitudesCreacion());
+
         return "gerencia/subir-expediente";
     }
     
     
-    @GetMapping("/crearOrg")
-    public String CrearOrg(){
+    @GetMapping("/crearOrg/{idSolicitud}")
+    public String CrearOrg(Model model, @PathVariable("idSolicitud") Long idSolicitud){
+
+        Solicitud solicitudEncontrado = solicitudService.encontrarSolicitud(idSolicitud);
+
+        OrganizacionDto organizacionDto = new OrganizacionDto();
+
+        organizacionDto.setNombreOrganizacion(solicitudEncontrado.getNombre_org());
+        organizacionDto.setNivelOrg(solicitudEncontrado.getNivelOrganizacion().getId().intValue());
+        organizacionDto.setTipoOrg(solicitudEncontrado.getTipoOrganizacion().getId().intValue());
+        organizacionDto.setLocal(solicitudEncontrado.getLocal().getId().intValue());
+
+        model.addAttribute("idSolicitud", idSolicitud);
+        model.addAttribute("solicitud", solicitudEncontrado);
+        model.addAttribute("organizacionDto", organizacionDto);
+
         return "gerencia/Crear-Organizacion";
+
     }
     
-    @GetMapping("/crearJunta")
-    public String crearJunta(){
+    @PostMapping("/crearJunta")
+    public String crearJunta(OrganizacionDto organizacionDto) {
+
+        organizacionService.registrarOrganizacion(organizacionDto);
+
         return "gerencia/Crear-Junta";
+
     }
     
     @PostMapping("/logear")
     public String logearGerencia() {
         return "menu/gerencia";
     }
+
 }

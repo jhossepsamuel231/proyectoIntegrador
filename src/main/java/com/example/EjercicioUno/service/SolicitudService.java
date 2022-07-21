@@ -35,4 +35,6 @@ public interface SolicitudService {
     List<Solicitud> listarInformeParaGerente();
     
     void Eliminar(Long id);
+
+    List<Solicitud> listarSolicitudesCreacion();
 }

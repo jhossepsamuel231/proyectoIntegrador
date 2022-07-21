@@ -25,5 +25,10 @@ public class TipoOrgServiceImpl implements TipoOrgService{
     public List<TipoOrganizacion> listadTipoOrg() {
         return tipoOrgRepository.findAll();
     }
-    
+
+    @Override
+    public TipoOrganizacion encontrarTipoOrgById(Long id) {
+        return tipoOrgRepository.findById(id).orElse(null);
+    }
+
 }
